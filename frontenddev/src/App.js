@@ -22,6 +22,8 @@ const App = () => {
   
   })
 
+  setWord('');
+
 }
 console.log(process.env);
 
