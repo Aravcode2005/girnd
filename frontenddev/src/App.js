@@ -2,11 +2,13 @@ import {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Search from './components/Search';
+import ImageCard from './components/Imagecard';
+
 const UNSPLASH_KEY=process.env.REACT_APP_UNSPLASH_KEY;
 const App = () => {
  const [word, setWord] = useState('');
  const[images,setImages]=useState([])//Empty array at the start
- console.log(images);
+
  const handleSearchSubmit = (e) => {
   e.preventDefault(); 
   console.log(word); 
