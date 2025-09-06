@@ -1,8 +1,9 @@
 import React from 'react';
 import {Navbar,Container} from 'react-bootstrap';
+import 
 const navbarStyle={
 
-    backgroundColor:'pink'
+    backgroundColor:'orange'
 };
 const Header=(props)=>{
     return(
