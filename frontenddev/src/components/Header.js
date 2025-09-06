@@ -1,6 +1,7 @@
 import React from 'react';
 import {Navbar,Container} from 'react-bootstrap';
-import 
+import {ReactComponent as Logo } from '../components/Imagegallery/logo.svg';
+
 const navbarStyle={
 
     backgroundColor:'orange'
@@ -8,8 +9,12 @@ const navbarStyle={
 const Header=(props)=>{
     return(
      <Navbar style={navbarStyle} variant ="light">
-      
-     <Navbar.Brand href="/">{props.title}</Navbar.Brand>
+      <Container>
+
+      <Logo style ={{maxWidth:'10rem'}}/>
+
+      </Container>
+
       </Navbar>
 
     )
