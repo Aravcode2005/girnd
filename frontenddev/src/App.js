@@ -3,7 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import Imagecard from "./components/Imagecard";
+import Welcome from "./components/Wlcm";
 import { Container, Row, Col } from "react-bootstrap";
+
+
 
 const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
 const App = () => {
@@ -38,14 +41,18 @@ const App = () => {
         setWord={setWord}
         handlesubmit={handleSearchSubmit}
       ></Search>
-      <Container>
-        <Row xs={1} md={2} lg={3}>
-          {images.map((images, i) => (
-            <Col key={i} className="pb-3">
-              <Imagecard image={images} deleteimage={handledelete} />
-            </Col>
-          ))}
-        </Row>
+      <Container className="mt-4">
+        {images.length ? (
+          <Row xs={1} md={2} lg={3}>
+            {images.map((images, i) => (
+              <Col key={i} className="pb-3">
+                <Imagecard image={images} deleteimage={handledelete} />
+              </Col>
+            ))}
+          </Row>
+        ) : (
+          <Welcome/>
+        )}
       </Container>
     </div>
   );

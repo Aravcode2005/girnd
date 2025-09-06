@@ -4,14 +4,14 @@ import {ReactComponent as Logo } from '../components/Imagegallery/logo.svg';
 
 const navbarStyle={
 
-    backgroundColor:'orange'
+    backgroundColor:'black',
 };
-const Header=(props)=>{
+const Header=({title})=>{
     return(
      <Navbar style={navbarStyle} variant ="light">
       <Container>
 
-      <Logo style ={{maxWidth:'10rem'}}/>
+      <Logo alt={title} style={{maxWidth:'10rem',maxHeight:'2rem'}}/>
 
       </Container>
 
