@@ -1,7 +1,11 @@
-from flask import Flask
+from flask import Flask,request
 
 app=Flask(__name__)
-@app.route("/")
+@app.route("/new_image")
+def new_image():
+    word=request.args.get("query")
+    return {"word":word}
+
 def hello():
     return "Hello ,World"
 app.route("/")(hello)
